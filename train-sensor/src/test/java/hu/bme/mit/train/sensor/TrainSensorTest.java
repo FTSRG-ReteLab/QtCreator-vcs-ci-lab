@@ -16,7 +16,7 @@ public class TrainSensorTest {
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        TrainSensorImpl sensor = new TrainSensorImpl(new TrainController(), new TrainUser(new TrainController()));
+        TrainSensorImpl sensor = new TrainSensorImpl(new TrainControllerImpl(), new TrainUserImpl(new TrainControllerImpl()));
         sensor.overrideSpeedLimit(500);
         assertEquals(500, sensor.getSpeedLimit());
     }
