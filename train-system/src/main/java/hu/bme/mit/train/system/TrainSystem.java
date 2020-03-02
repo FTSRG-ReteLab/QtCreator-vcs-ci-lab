@@ -13,6 +13,8 @@ public class TrainSystem {
 	private TrainUser user = new TrainUserImpl(controller);
 	private TrainSensor sensor = new TrainSensorImpl(controller, user);
 
+	public Table<Integer, Integer, Integer> Tachograph = HashBasedTable.create();
+
 	public TrainController getController() {
 		return controller;
 	}
@@ -24,5 +26,7 @@ public class TrainSystem {
 	public TrainUser getUser() {
 		return user;
 	}
+
+
 
 }
