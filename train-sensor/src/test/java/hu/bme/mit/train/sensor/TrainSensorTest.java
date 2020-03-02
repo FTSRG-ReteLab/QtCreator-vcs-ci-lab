@@ -9,11 +9,12 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        // TODO Add initializations
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+        TrainSensorImpl sensor = new TrainSensorImpl(new TrainControllerImpl(), new TrainUserImpl(new TrainControllerImpl()));
+        sensor.overrideSpeedLimit(500);
+        assertEquals(500, sensor.getSpeedLimit());
     }
 }
