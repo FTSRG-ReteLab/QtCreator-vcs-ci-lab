@@ -17,7 +17,7 @@ public class TrainSensorImpl implements TrainSensor {
 
 	@Override
 	public int getSpeedLimit() {
-		return speedLimit.ToString();
+		return Integer.toString(speedLimit);
 	}
 
 	@Override
