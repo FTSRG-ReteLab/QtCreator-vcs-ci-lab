@@ -23,6 +23,8 @@ public class TrainSystemTest {
 		user = system.getUser();
 
 		sensor.overrideSpeedLimit(50);
+		system.Tachograph.put(100,1000,2000);
+		system.Tachograph.put(110,1000,3000);
 	}
 	
 	@Test
@@ -56,5 +58,9 @@ public class TrainSystemTest {
 		Assert.assertEquals(500, sensor.getSpeedLimit());
 	}
 
-	
+	@Test
+	public void TabelTest(){
+		Assert.assertFalse(system.Tachograph.isEmpty());
+	}
+
 }
