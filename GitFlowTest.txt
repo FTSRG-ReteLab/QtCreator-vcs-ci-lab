@@ -1,1 +1,4 @@
-Lorem ipsum
+
+Lorem ipsum Branch-B version
+Lorem ipsum Branch-A version
+
