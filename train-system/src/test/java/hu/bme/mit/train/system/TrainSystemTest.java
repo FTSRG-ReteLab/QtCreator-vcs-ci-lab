@@ -16,6 +16,7 @@ public class TrainSystemTest {
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
+	Table<Integer, Integer, Integer> Tachograph;
 	
 	@Before
 	public void before() {
@@ -23,10 +24,11 @@ public class TrainSystemTest {
 		controller = system.getController();
 		sensor = system.getSensor();
 		user = system.getUser();
+		Tachograph = system.Tachograph;
 
 		sensor.overrideSpeedLimit(50);
-		system.Tachograph.put(100,1000,2000);
-		system.Tachograph.put(110,1000,3000);
+		Tachograph.put(100,1000,2000);
+		Tachograph.put(110,1000,3000);
 	}
 	
 	@Test
@@ -62,7 +64,7 @@ public class TrainSystemTest {
 
 	@Test
 	public void TabelTest(){
-		Assert.assertFalse(system.Tachograph.isEmpty());
+		Assert.assertFalse(Tachograph.isEmpty());
 	}
 
 }
