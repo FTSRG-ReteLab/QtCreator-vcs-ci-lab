@@ -4,6 +4,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
 
 import org.junit.Assert;
+
 import org.junit.Before;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
@@ -49,5 +50,6 @@ public class TrainSensorTest {
     public void BetweenMargin(){
         trainSensor.overrideSpeedLimit(300);
         verify(mockTrainUser, times(0)).setAlarmState(false);
+
     }
 }
