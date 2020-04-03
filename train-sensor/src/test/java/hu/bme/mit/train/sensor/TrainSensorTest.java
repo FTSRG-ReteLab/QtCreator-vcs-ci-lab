@@ -35,7 +35,7 @@ public class TrainSensorTest {
     @Test
     public void AbsuMaxMargin(){
         trainSensor.overrideSpeedLimit(501);
-        verify(mockTrainUser, times(1)).setAlarmState(true);
+        verify(mockTrainUser, times(1)).getAlarmState();
     }
 
     @Test
