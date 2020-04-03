@@ -23,7 +23,8 @@ public class TrainSensorTest {
 
     @Test
     public void ChechSpeedLimit(){
-        Assert.assertEquals(10, 10);
+        trainSensor.overrideSpeedLimit(10);
+        Assert.assertEquals(trainSensor.getSpeedLimit(), 10);
     }
 
     @Test
